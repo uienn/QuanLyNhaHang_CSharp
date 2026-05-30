@@ -1,8 +1,8 @@
 namespace QuanLyNhaHang
 {
-    public partial class btnQuanLyKho : Form
+    public partial class FrmMain : Form
     {
-        public btnQuanLyKho()
+        public FrmMain()
         {
             InitializeComponent();
         }
@@ -63,8 +63,8 @@ namespace QuanLyNhaHang
         public void MoKhoaTatCaChucNang()
         {
             // Bạn kiểm tra lại tên (Name) chính xác của các nút trên Menu của bạn để sửa lại nếu bị đỏ nha
-            button2 .Enabled = true;
-            button3 .Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
             btnDatBan.Enabled = true;
         }
 
@@ -78,6 +78,27 @@ namespace QuanLyNhaHang
             // Tự động mở thẳng Form Gọi Món (FrmDatBan) lên cho khách thao tác luôn
             FrmDatBan frm = new FrmDatBan();
             frm.ShowDialog();
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmHoaDon());
+        }
+        private void OpenChildForm(Form childForm)
+        {
+            // 1. Cấu hình để Form con không tự biến thành cửa sổ độc lập
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+
+            // 2. Thiết lập cho Form con tự động giãn nở khít khịt với vùng chứa
+            childForm.Dock = DockStyle.Fill;
+            panelContent.Controls.Clear();
+
+            // 4. Thêm Form Hóa Đơn mới vào Panel và ra lệnh hiển thị
+            panelContent.Controls.Add(childForm);
+            panelContent.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }

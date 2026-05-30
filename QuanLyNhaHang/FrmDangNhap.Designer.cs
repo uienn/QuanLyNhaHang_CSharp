@@ -37,6 +37,7 @@
             label3 = new Label();
             txtSoBan = new TextBox();
             btnThoat = new Button();
+            lnkDangKy = new LinkLabel();
             SuspendLayout();
             // 
             // label1
@@ -77,7 +78,7 @@
             // btnDangNhap
             // 
             btnDangNhap.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDangNhap.Location = new Point(355, 348);
+            btnDangNhap.Location = new Point(350, 325);
             btnDangNhap.Name = "btnDangNhap";
             btnDangNhap.Size = new Size(119, 39);
             btnDangNhap.TabIndex = 4;
@@ -122,12 +123,24 @@
             btnThoat.UseVisualStyleBackColor = true;
             btnThoat.Click += btnThoat_Click;
             // 
+            // lnkDangKy
+            // 
+            lnkDangKy.AutoSize = true;
+            lnkDangKy.Location = new Point(302, 409);
+            lnkDangKy.Name = "lnkDangKy";
+            lnkDangKy.Size = new Size(229, 20);
+            lnkDangKy.TabIndex = 10;
+            lnkDangKy.TabStop = true;
+            lnkDangKy.Text = "Chưa có tài khoản? Đăng kí ngay.";
+            lnkDangKy.LinkClicked += lnkDangKy_LinkClicked;
+            // 
             // FrmDangNhap
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SkyBlue;
             ClientSize = new Size(800, 450);
+            Controls.Add(lnkDangKy);
             Controls.Add(btnThoat);
             Controls.Add(txtSoBan);
             Controls.Add(label3);
@@ -154,5 +167,6 @@
         private Label label3;
         private TextBox txtSoBan;
         private Button btnThoat;
+        private LinkLabel lnkDangKy;
     }
 }

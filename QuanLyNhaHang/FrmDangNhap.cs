@@ -17,10 +17,7 @@ namespace QuanLyNhaHang
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            // 1. Lấy đối tượng Form chính đang chạy ngầm
-            btnQuanLyKho frmMain = (btnQuanLyKho)Application.OpenForms["btnQuanLyKho"];
-
-            // 2. Ép hệ thống tìm trực tiếp linh kiện trên giao diện theo Tên (Name) để lấy dữ liệu
+            // 1. Ép hệ thống tìm trực tiếp linh kiện trên giao diện theo Tên (Name) để lấy dữ liệu
             TextBox oTaiKhoan = (TextBox)this.Controls.Find("txtTaiKhoan", true).FirstOrDefault();
             TextBox oMatKhau = (TextBox)this.Controls.Find("txtMatKhau", true).FirstOrDefault();
             TextBox oSoBan = (TextBox)this.Controls.Find("txtSoBan", true).FirstOrDefault();
@@ -30,24 +27,44 @@ namespace QuanLyNhaHang
             string chuoiMatKhau = oMatKhau != null ? oMatKhau.Text.Trim() : "";
             string chuoiSoBan = oSoBan != null ? oSoBan.Text.Trim() : "";
 
-            // 3. KIỂM TRA TRƯỜNG HỢP QUẢN LÝ (admin / 123)
+            // 2. KIỂM TRA TRƯỜNG HỢP QUẢN LÝ (admin / 123)
             if (chuoiTaiKhoan == "admin" && chuoiMatKhau == "123")
             {
                 MessageBox.Show("Đăng nhập quyền QUẢN LÝ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (frmMain != null)
-                {
-                    frmMain.MoKhoaTatCaChucNang();
-                }
+
+                // Ẩn Form Đăng Nhập đi để mở Form chính
+                this.Hide();
+
+                // Khởi tạo trực tiếp Form Chính (FrmMain) mới tinh của bbi
+                FrmMain frmChinh = new FrmMain();
+
+                // Gọi hàm mở khóa chức năng (nếu FrmMain của bbi có hàm này thì để, không có bbi xóa dòng dưới này đi nha)
+                frmChinh.MoKhoaTatCaChucNang();
+
+                // Bật Form Chính lên màn hình
+                frmChinh.ShowDialog();
+
+                // Khi tắt Form chính thì tắt luôn ứng dụng chạy ngầm
                 this.Close();
             }
             // 4. KIỂM TRA TRƯỜNG HỢP KHÁCH HÀNG (Có nhập số bàn)
             else if (!string.IsNullOrEmpty(chuoiSoBan))
             {
                 MessageBox.Show("Chào mừng quý khách ngồi bàn " + chuoiSoBan + "! Hệ thống gọi món đã sẵn sàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (frmMain != null)
-                {
-                    frmMain.CauHinhGiaoDienKhachHang();
-                }
+                // ĐOẠN CODE THAY THẾ CHO KHÁCH HÀNG (DÁN TỪ DÒNG 54):
+                // 1. Ẩn Form Đăng Nhập đi
+                this.Hide();
+
+                // 2. Tạo mới Form Chính FrmMain
+                FrmMain frmChinh = new FrmMain();
+
+                // 3. Gọi hàm cấu hình giao diện riêng cho Khách hàng
+                frmChinh.CauHinhGiaoDienKhachHang();
+
+                // 4. Bật Form Chính lên màn hình
+                frmChinh.ShowDialog();
+
+                // 5. Đóng hẳn ứng dụng khi thoát
                 this.Close();
             }
             // 5. SAI HOẶC ĐỂ TRỐNG
@@ -66,6 +83,14 @@ namespace QuanLyNhaHang
                 Application.Exit(); // Thoát toàn bộ ứng dụng
             }
         }
+
+        private void lnkDangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmDangKy frm = new FrmDangKy();
+
+            // 2. Hiển thị Form Đăng Ký lên dưới dạng hộp thoại độc lập
+            frm.ShowDialog();
+        }
     }
-    
+
 }

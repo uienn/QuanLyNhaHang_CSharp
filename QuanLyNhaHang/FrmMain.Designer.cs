@@ -1,6 +1,6 @@
 ﻿namespace QuanLyNhaHang
 {
-    partial class btnQuanLyKho
+    partial class FrmMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
+            btnHoaDon = new Button();
             btnDatBan = new Button();
             button3 = new Button();
             button2 = new Button();
@@ -39,6 +40,7 @@
             đăngNhậpToolStripMenuItem = new ToolStripMenuItem();
             đăngXuấtToolStripMenuItem = new ToolStripMenuItem();
             thoátToolStripMenuItem = new ToolStripMenuItem();
+            panelContent = new Panel();
             panel1.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
@@ -46,6 +48,7 @@
             // panel1
             // 
             panel1.BackColor = Color.AntiqueWhite;
+            panel1.Controls.Add(btnHoaDon);
             panel1.Controls.Add(btnDatBan);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
@@ -56,6 +59,21 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(230, 450);
             panel1.TabIndex = 1;
+            // 
+            // btnHoaDon
+            // 
+            btnHoaDon.BackColor = Color.NavajoWhite;
+            btnHoaDon.Dock = DockStyle.Top;
+            btnHoaDon.FlatAppearance.BorderSize = 0;
+            btnHoaDon.FlatStyle = FlatStyle.Flat;
+            btnHoaDon.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnHoaDon.Location = new Point(0, 140);
+            btnHoaDon.Name = "btnHoaDon";
+            btnHoaDon.Size = new Size(230, 35);
+            btnHoaDon.TabIndex = 4;
+            btnHoaDon.Text = "\U0001f9fe Hóa Đơn";
+            btnHoaDon.UseVisualStyleBackColor = false;
+            btnHoaDon.Click += btnHoaDon_Click;
             // 
             // btnDatBan
             // 
@@ -129,34 +147,43 @@
             // đăngKýToolStripMenuItem
             // 
             đăngKýToolStripMenuItem.Name = "đăngKýToolStripMenuItem";
-            đăngKýToolStripMenuItem.Size = new Size(210, 30);
+            đăngKýToolStripMenuItem.Size = new Size(177, 30);
             đăngKýToolStripMenuItem.Text = "Đăng Ký";
             // 
             // đăngNhậpToolStripMenuItem
             // 
             đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            đăngNhậpToolStripMenuItem.Size = new Size(210, 30);
+            đăngNhậpToolStripMenuItem.Size = new Size(177, 30);
             đăngNhậpToolStripMenuItem.Text = "Đăng Nhập";
             // 
             // đăngXuấtToolStripMenuItem
             // 
             đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            đăngXuấtToolStripMenuItem.Size = new Size(210, 30);
+            đăngXuấtToolStripMenuItem.Size = new Size(177, 30);
             đăngXuấtToolStripMenuItem.Text = "Đăng Xuất";
             // 
             // thoátToolStripMenuItem
             // 
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(210, 30);
+            thoátToolStripMenuItem.Size = new Size(177, 30);
             thoátToolStripMenuItem.Text = "Thoát";
             // 
-            // btnQuanLyKho
+            // panelContent
+            // 
+            panelContent.Dock = DockStyle.Fill;
+            panelContent.Location = new Point(230, 0);
+            panelContent.Name = "panelContent";
+            panelContent.Size = new Size(570, 450);
+            panelContent.TabIndex = 2;
+            // 
+            // FrmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(panelContent);
             Controls.Add(panel1);
-            Name = "btnQuanLyKho";
+            Name = "FrmMain";
             Text = "Form1";
             panel1.ResumeLayout(false);
             contextMenuStrip1.ResumeLayout(false);
@@ -174,5 +201,7 @@
         private ToolStripMenuItem đăngNhậpToolStripMenuItem;
         private ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private ToolStripMenuItem thoátToolStripMenuItem;
+        private Button btnHoaDon;
+        private Panel panelContent;
     }
 }
