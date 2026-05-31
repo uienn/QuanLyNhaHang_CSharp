@@ -82,23 +82,11 @@ namespace QuanLyNhaHang
 
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmHoaDon());
-        }
-        private void OpenChildForm(Form childForm)
-        {
-            // 1. Cấu hình để Form con không tự biến thành cửa sổ độc lập
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
+            // 1. Khởi tạo riêng một Form Hóa Đơn mới tinh
+            FrmHoaDon fHoaDon = new FrmHoaDon();
 
-            // 2. Thiết lập cho Form con tự động giãn nở khít khịt với vùng chứa
-            childForm.Dock = DockStyle.Fill;
-            panelContent.Controls.Clear();
-
-            // 4. Thêm Form Hóa Đơn mới vào Panel và ra lệnh hiển thị
-            panelContent.Controls.Add(childForm);
-            panelContent.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+            // 2. Ép nó hiển thị bật lên thành một cửa sổ độc lập hoàn toàn
+            fHoaDon.ShowDialog();
         }
     }
 }

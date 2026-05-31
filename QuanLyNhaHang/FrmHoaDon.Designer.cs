@@ -289,6 +289,7 @@
             Controls.Add(txtSoBan);
             Controls.Add(txtMaHD);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FrmHoaDon";
             Text = "FrmHoaDon";
             panel1.ResumeLayout(false);
