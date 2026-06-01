@@ -99,5 +99,14 @@ namespace QuanLyNhaHang
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // 1. Khởi tạo riêng một Form Nhân Viên mới tinh
+            FrmNhanVien fNhanVien = new FrmNhanVien();
+
+            // 2. Ép nó hiển thị bật lên thành một cửa sổ độc lập hoàn toàn
+            fNhanVien.ShowDialog();
+        }
     }
 }

@@ -41,6 +41,7 @@
             đăngXuấtToolStripMenuItem = new ToolStripMenuItem();
             thoátToolStripMenuItem = new ToolStripMenuItem();
             panelContent = new Panel();
+            btnQuanLyNhanVien = new Button();
             panel1.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
@@ -48,6 +49,7 @@
             // panel1
             // 
             panel1.BackColor = Color.LightBlue;
+            panel1.Controls.Add(btnQuanLyNhanVien);
             panel1.Controls.Add(btnHoaDon);
             panel1.Controls.Add(btnDatBan);
             panel1.Controls.Add(button3);
@@ -176,6 +178,21 @@
             panelContent.Size = new Size(570, 450);
             panelContent.TabIndex = 2;
             // 
+            // btnQuanLyNhanVien
+            // 
+            btnQuanLyNhanVien.BackColor = Color.SkyBlue;
+            btnQuanLyNhanVien.Dock = DockStyle.Top;
+            btnQuanLyNhanVien.FlatAppearance.BorderSize = 0;
+            btnQuanLyNhanVien.FlatStyle = FlatStyle.Flat;
+            btnQuanLyNhanVien.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnQuanLyNhanVien.Location = new Point(0, 175);
+            btnQuanLyNhanVien.Name = "btnQuanLyNhanVien";
+            btnQuanLyNhanVien.Size = new Size(230, 35);
+            btnQuanLyNhanVien.TabIndex = 5;
+            btnQuanLyNhanVien.Text = "Quản Lý Nhân Viên\r\n";
+            btnQuanLyNhanVien.UseVisualStyleBackColor = false;
+            btnQuanLyNhanVien.Click += button4_Click;
+            // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -203,5 +220,6 @@
         private ToolStripMenuItem thoátToolStripMenuItem;
         private Button btnHoaDon;
         private Panel panelContent;
+        private Button btnQuanLyNhanVien;
     }
 }
