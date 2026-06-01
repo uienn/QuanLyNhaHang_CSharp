@@ -129,7 +129,7 @@
             // 
             // btnSua
             // 
-            btnSua.BackColor = Color.PaleTurquoise;
+            btnSua.BackColor = Color.SkyBlue;
             btnSua.FlatAppearance.BorderSize = 0;
             btnSua.FlatStyle = FlatStyle.Flat;
             btnSua.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -185,7 +185,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.AntiqueWhite;
+            BackColor = Color.LightBlue;
             ClientSize = new Size(760, 562);
             Controls.Add(dgvMonAn);
             Controls.Add(btnLamMoi);

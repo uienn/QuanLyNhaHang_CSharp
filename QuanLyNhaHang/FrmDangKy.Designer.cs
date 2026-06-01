@@ -49,7 +49,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.GradientActiveCaption;
+            panel1.BackColor = Color.SkyBlue;
             panel1.Controls.Add(label1);
             panel1.Location = new Point(-1, 2);
             panel1.Name = "panel1";
@@ -194,7 +194,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.GradientInactiveCaption;
+            BackColor = Color.LightBlue;
             ClientSize = new Size(800, 450);
             Controls.Add(btnHuy);
             Controls.Add(btnDangKy);

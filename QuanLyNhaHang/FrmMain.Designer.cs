@@ -47,7 +47,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.AntiqueWhite;
+            panel1.BackColor = Color.LightBlue;
             panel1.Controls.Add(btnHoaDon);
             panel1.Controls.Add(btnDatBan);
             panel1.Controls.Add(button3);
@@ -62,7 +62,7 @@
             // 
             // btnHoaDon
             // 
-            btnHoaDon.BackColor = Color.NavajoWhite;
+            btnHoaDon.BackColor = Color.SkyBlue;
             btnHoaDon.Dock = DockStyle.Top;
             btnHoaDon.FlatAppearance.BorderSize = 0;
             btnHoaDon.FlatStyle = FlatStyle.Flat;
@@ -77,7 +77,7 @@
             // 
             // btnDatBan
             // 
-            btnDatBan.BackColor = Color.NavajoWhite;
+            btnDatBan.BackColor = Color.SkyBlue;
             btnDatBan.Dock = DockStyle.Top;
             btnDatBan.FlatAppearance.BorderSize = 0;
             btnDatBan.FlatStyle = FlatStyle.Flat;
@@ -92,7 +92,7 @@
             // 
             // button3
             // 
-            button3.BackColor = Color.NavajoWhite;
+            button3.BackColor = Color.SkyBlue;
             button3.Dock = DockStyle.Top;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
@@ -107,7 +107,7 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.NavajoWhite;
+            button2.BackColor = Color.SkyBlue;
             button2.Dock = DockStyle.Top;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
@@ -122,7 +122,7 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.NavajoWhite;
+            button1.BackColor = Color.SkyBlue;
             button1.Dock = DockStyle.Top;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;

@@ -27,8 +27,15 @@ namespace QuanLyNhaHang
 
         private void đặtBànToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmDatBan frm = new FrmDatBan();
-            frm.ShowDialog();
+            // Hiển thị hộp thoại thông báo số Hotline đặt bàn của nhà hàng 
+            MessageBox.Show(
+                "🍲 NHÀ HÀNG LẨU KICHI HÂN HẠNH PHỤC VỤ QUÝ KHÁCH! 🍲\n\n" +
+                "📞 Hotline đặt bàn giữ chỗ trước: 0867.050.507" +
+                "✨ (Vui lòng gọi trước 30 phút để nhà hàng chuẩn bị nước lẩu và không gian tốt nhất cho quý khách nhé!)",
+                "LIÊN HỆ ĐẶT BÀN",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
         }
 
         private void đăngKysToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,8 +83,7 @@ namespace QuanLyNhaHang
             btnDatBan.Enabled = true;      // Khách được quyền đặt bàn và gọi món
 
             // Tự động mở thẳng Form Gọi Món (FrmDatBan) lên cho khách thao tác luôn
-            FrmDatBan frm = new FrmDatBan();
-            frm.ShowDialog();
+            đặtBànToolStripMenuItem_Click(null, null);
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)
@@ -87,6 +93,11 @@ namespace QuanLyNhaHang
 
             // 2. Ép nó hiển thị bật lên thành một cửa sổ độc lập hoàn toàn
             fHoaDon.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
