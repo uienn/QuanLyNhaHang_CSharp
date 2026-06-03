@@ -126,7 +126,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.PapayaWhip;
+            panel1.BackColor = Color.LightBlue;
             panel1.Controls.Add(txtDonGia);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(dgvChiTiet);
@@ -274,7 +274,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.NavajoWhite;
+            BackColor = Color.SkyBlue;
             ClientSize = new Size(800, 450);
             Controls.Add(label9);
             Controls.Add(btnLamMoi);

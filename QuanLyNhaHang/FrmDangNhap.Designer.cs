@@ -34,8 +34,6 @@
             label2 = new Label();
             btnDangNhap = new Button();
             label4 = new Label();
-            label3 = new Label();
-            txtSoBan = new TextBox();
             btnThoat = new Button();
             lnkDangKy = new LinkLabel();
             SuspendLayout();
@@ -78,7 +76,7 @@
             // btnDangNhap
             // 
             btnDangNhap.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDangNhap.Location = new Point(350, 325);
+            btnDangNhap.Location = new Point(334, 301);
             btnDangNhap.Name = "btnDangNhap";
             btnDangNhap.Size = new Size(119, 39);
             btnDangNhap.TabIndex = 4;
@@ -90,28 +88,11 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(304, 70);
+            label4.Location = new Point(277, 46);
             label4.Name = "label4";
             label4.Size = new Size(227, 46);
             label4.TabIndex = 6;
             label4.Text = "ĐĂNG NHẬP";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(132, 259);
-            label3.Name = "label3";
-            label3.Size = new Size(230, 25);
-            label3.TabIndex = 7;
-            label3.Text = "Nhập số bàn để gọi món :";
-            // 
-            // txtSoBan
-            // 
-            txtSoBan.Location = new Point(381, 257);
-            txtSoBan.Name = "txtSoBan";
-            txtSoBan.Size = new Size(125, 27);
-            txtSoBan.TabIndex = 8;
             // 
             // btnThoat
             // 
@@ -126,7 +107,7 @@
             // lnkDangKy
             // 
             lnkDangKy.AutoSize = true;
-            lnkDangKy.Location = new Point(302, 409);
+            lnkDangKy.Location = new Point(277, 409);
             lnkDangKy.Name = "lnkDangKy";
             lnkDangKy.Size = new Size(229, 20);
             lnkDangKy.TabIndex = 10;
@@ -142,8 +123,6 @@
             ClientSize = new Size(800, 450);
             Controls.Add(lnkDangKy);
             Controls.Add(btnThoat);
-            Controls.Add(txtSoBan);
-            Controls.Add(label3);
             Controls.Add(label4);
             Controls.Add(btnDangNhap);
             Controls.Add(label2);
@@ -164,8 +143,6 @@
         private Label label2;
         private Button btnDangNhap;
         private Label label4;
-        private Label label3;
-        private TextBox txtSoBan;
         private Button btnThoat;
         private LinkLabel lnkDangKy;
     }

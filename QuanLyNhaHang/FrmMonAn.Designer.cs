@@ -24,7 +24,7 @@
             txtMaMon = new TextBox();
             txtTenMon = new TextBox();
             txtGiaTien = new TextBox();
-            cboLoaiMon = new ComboBox();
+            cbDanhMuc = new ComboBox();
             btnThem = new Button();
             btnSua = new Button();
             btnXoa = new Button();
@@ -100,17 +100,17 @@
             txtGiaTien.Size = new Size(220, 30);
             txtGiaTien.TabIndex = 6;
             // 
-            // cboLoaiMon
+            // cbDanhMuc
             // 
-            cboLoaiMon.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboLoaiMon.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cboLoaiMon.FormattingEnabled = true;
-            cboLoaiMon.Items.AddRange(new object[] { "Nước lẩu", "Thịt nhúng", "Đồ viên thả lẩu", "Rau nấm ăn kèm", "Mì miến ăn kèm" });
-            cboLoaiMon.Location = new Point(500, 90);
-            cboLoaiMon.Margin = new Padding(3, 4, 3, 4);
-            cboLoaiMon.Name = "cboLoaiMon";
-            cboLoaiMon.Size = new Size(220, 31);
-            cboLoaiMon.TabIndex = 5;
+            cbDanhMuc.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbDanhMuc.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbDanhMuc.FormattingEnabled = true;
+            cbDanhMuc.Items.AddRange(new object[] { "Nước lẩu", "Thịt nhúng", "Đồ viên thả lẩu", "Rau nấm ăn kèm", "Mì miến ăn kèm" });
+            cbDanhMuc.Location = new Point(500, 90);
+            cbDanhMuc.Margin = new Padding(3, 4, 3, 4);
+            cbDanhMuc.Name = "cbDanhMuc";
+            cbDanhMuc.Size = new Size(220, 31);
+            cbDanhMuc.TabIndex = 5;
             // 
             // btnThem
             // 
@@ -126,6 +126,7 @@
             btnThem.TabIndex = 4;
             btnThem.Text = "Thêm món\r\n";
             btnThem.UseVisualStyleBackColor = false;
+            btnThem.Click += btnThemMon_Click;
             // 
             // btnSua
             // 
@@ -140,6 +141,7 @@
             btnSua.TabIndex = 3;
             btnSua.Text = "Sửa món";
             btnSua.UseVisualStyleBackColor = false;
+            btnSua.Click += btnSua_Click;
             // 
             // btnXoa
             // 
@@ -154,6 +156,7 @@
             btnXoa.TabIndex = 2;
             btnXoa.Text = "Xóa món";
             btnXoa.UseVisualStyleBackColor = false;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnLamMoi
             // 
@@ -168,6 +171,7 @@
             btnLamMoi.TabIndex = 1;
             btnLamMoi.Text = "Làm mới";
             btnLamMoi.UseVisualStyleBackColor = false;
+            btnLamMoi.Click += btnLamMoi_Click;
             // 
             // dgvMonAn
             // 
@@ -180,6 +184,7 @@
             dgvMonAn.RowHeadersWidth = 51;
             dgvMonAn.Size = new Size(686, 288);
             dgvMonAn.TabIndex = 0;
+            dgvMonAn.CellContentClick += dgvMonAn_CellContentClick;
             // 
             // FrmMonAn
             // 
@@ -192,7 +197,7 @@
             Controls.Add(btnXoa);
             Controls.Add(btnSua);
             Controls.Add(btnThem);
-            Controls.Add(cboLoaiMon);
+            Controls.Add(cbDanhMuc);
             Controls.Add(txtGiaTien);
             Controls.Add(txtTenMon);
             Controls.Add(txtMaMon);
@@ -204,6 +209,7 @@
             Name = "FrmMonAn";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "QUẢN LÝ DANH MỤC MÓN LẨU & MÓN ĂN KÈM";
+            Load += FrmMonAn_Load_1;
             ((System.ComponentModel.ISupportInitialize)dgvMonAn).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -225,5 +231,6 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.DataGridView dgvMonAn;
+        private ComboBox cbDanhMuc;
     }
 }
