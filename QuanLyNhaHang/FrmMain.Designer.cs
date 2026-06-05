@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
+            btnQuanLyNhanVien = new Button();
             btnHoaDon = new Button();
             btnDatBan = new Button();
             button3 = new Button();
@@ -41,7 +42,6 @@
             đăngXuấtToolStripMenuItem = new ToolStripMenuItem();
             thoátToolStripMenuItem = new ToolStripMenuItem();
             panelContent = new Panel();
-            btnQuanLyNhanVien = new Button();
             panel1.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
@@ -59,8 +59,23 @@
             panel1.ForeColor = SystemColors.ControlText;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(230, 450);
+            panel1.Size = new Size(230, 455);
             panel1.TabIndex = 1;
+            // 
+            // btnQuanLyNhanVien
+            // 
+            btnQuanLyNhanVien.BackColor = Color.SkyBlue;
+            btnQuanLyNhanVien.Dock = DockStyle.Top;
+            btnQuanLyNhanVien.FlatAppearance.BorderSize = 0;
+            btnQuanLyNhanVien.FlatStyle = FlatStyle.Flat;
+            btnQuanLyNhanVien.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnQuanLyNhanVien.Location = new Point(0, 175);
+            btnQuanLyNhanVien.Name = "btnQuanLyNhanVien";
+            btnQuanLyNhanVien.Size = new Size(230, 35);
+            btnQuanLyNhanVien.TabIndex = 5;
+            btnQuanLyNhanVien.Text = "Quản Lý Nhân Viên\r\n";
+            btnQuanLyNhanVien.UseVisualStyleBackColor = false;
+            btnQuanLyNhanVien.Click += button4_Click;
             // 
             // btnHoaDon
             // 
@@ -175,29 +190,14 @@
             panelContent.Dock = DockStyle.Fill;
             panelContent.Location = new Point(230, 0);
             panelContent.Name = "panelContent";
-            panelContent.Size = new Size(570, 450);
+            panelContent.Size = new Size(572, 455);
             panelContent.TabIndex = 2;
-            // 
-            // btnQuanLyNhanVien
-            // 
-            btnQuanLyNhanVien.BackColor = Color.SkyBlue;
-            btnQuanLyNhanVien.Dock = DockStyle.Top;
-            btnQuanLyNhanVien.FlatAppearance.BorderSize = 0;
-            btnQuanLyNhanVien.FlatStyle = FlatStyle.Flat;
-            btnQuanLyNhanVien.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnQuanLyNhanVien.Location = new Point(0, 175);
-            btnQuanLyNhanVien.Name = "btnQuanLyNhanVien";
-            btnQuanLyNhanVien.Size = new Size(230, 35);
-            btnQuanLyNhanVien.TabIndex = 5;
-            btnQuanLyNhanVien.Text = "Quản Lý Nhân Viên\r\n";
-            btnQuanLyNhanVien.UseVisualStyleBackColor = false;
-            btnQuanLyNhanVien.Click += button4_Click;
             // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(802, 455);
             Controls.Add(panelContent);
             Controls.Add(panel1);
             Name = "FrmMain";
